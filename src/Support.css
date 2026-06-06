@@ -6,7 +6,7 @@
 
 .support-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .support-header h1 {
@@ -71,16 +71,55 @@
 
 /* Contact Card (Right Side) */
 .contact-card {
-  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(4px);
+  transform: scale(1.08);
+  z-index: 1;
+}
+
+.contact-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 2;
+}
+
+.contact-card-content {
+  position: relative;
+  z-index: 3;
 }
 
 .contact-card h2 {
-  color: #e63946;
+  color: white;
   margin-bottom: 20px;
 }
 
-/* Form Styles */
+.contact-card .form-group label {
+  color: white;
+}
 
+.contact-card .form-group input,
+.contact-card .form-group textarea {
+  background: rgba(255, 255, 255, 0.10);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.contact-card .form-group input::placeholder,
+.contact-card .form-group textarea::placeholder {
+  color: white;
+}
+
+/* Form Styles */
 .support-form {
   display: flex;
   flex-direction: column;

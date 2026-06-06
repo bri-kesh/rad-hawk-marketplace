@@ -1,4 +1,5 @@
 import "../Support.css";
+import supportHawk from "../../assets/images/support_page_hawk.png"
 
 function Support() {
   return (
@@ -49,9 +50,15 @@ function Support() {
         </section>
 
         <section className="support-card contact-card">
-          <h2>Contact Support</h2>
+          <img src={supportHawk}
+           alt="red hawk"
+           className="contact-card-bg-image"/>
 
-          <form className="support-form">
+          <div className="contact-card-overlay"></div>
+
+          <div className="contact-card-content">
+            <h2>Contact Support</h2>
+            <form className="support-form">
             <div className="form-group">
               <label htmlFor="name">Full Name</label>
               <input
@@ -92,6 +99,7 @@ function Support() {
               Submit Request
             </button>
           </form>
+          </div>
         </section>
       </div>
     </main>
